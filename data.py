@@ -68,7 +68,7 @@ def get_ecg_data(num):
     :return:
     '''
     #address='../mit-bih-ecg-compression-test-database-1.0.0/'
-    address = 'C:/Users/ChenMingfeng/Downloads/autonomic-aging-a-dataset-to-quantify-changes-of-cardiovascular-autonomic-function-during-healthy-aging-1.0.0/'
+    address = '../autonomic-aging-a-dataset-to-quantify-changes-of-cardiovascular-autonomic-function-during-healthy-aging-1.0.0/'
     record = wfdb.rdrecord(address+num, sampto=1280, channels=[0])
     
     return record.p_signal
@@ -141,8 +141,8 @@ class CSNet_TestData(torch.utils.data.Dataset):
     def __getitem__(self, index):
         return get_csnet_test_data(index)
 
-train_file = open('C:/Users/ChenMingfeng/Downloads/autonomic-aging-a-dataset-to-quantify-changes-of-cardiovascular-autonomic-function-during-healthy-aging-1.0.0/train_file.txt', 'r')
-test_file = open('C:/Users/ChenMingfeng/Downloads/autonomic-aging-a-dataset-to-quantify-changes-of-cardiovascular-autonomic-function-during-healthy-aging-1.0.0/test_file.txt', 'r')
+train_file = open('../autonomic-aging-a-dataset-to-quantify-changes-of-cardiovascular-autonomic-function-during-healthy-aging-1.0.0/train_file.txt', 'r')
+test_file = open('../autonomic-aging-a-dataset-to-quantify-changes-of-cardiovascular-autonomic-function-during-healthy-aging-1.0.0/test_file.txt', 'r')
 train_nums = []
 test_nums = []
 #A = define_A(48,256)
